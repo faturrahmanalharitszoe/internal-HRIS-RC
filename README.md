@@ -8,40 +8,58 @@
 
 A comprehensive Internal Human Resource Information System (HRIS) built to streamline employee management, payroll, and leave monitoring. This application features a robust multi-tenant architecture supporting multiple regions and tenants.
 
+## 📸 Visual Preview
+
+<p align="center">
+  <img src="images/Img1.png" width="800" alt="Dashboard Overview">
+  <br />
+  <i>Main Dashboard: Employee statistics and regional overview.</i>
+</p>
+
+<p align="center">
+  <img src="images/Img2.png" width="400" alt="Salary Security">
+  <img src="images/Img3.png" width="400" alt="Payroll Management">
+  <br />
+  <i>Left: PIN Security Verification. Right: Digital Salary Slip Management.</i>
+</p>
+
+---
+
 ## 🚀 Key Features
 
 ### 💰 Payroll Management (Slip Gaji)
-- **Digital Payslips**: Generate and view monthly salary slips.
-- **Secure Access**: Protected by a 6-digit PIN system using Bcrypt hashing.
-- **Bulk Upload**: Admin capability to upload staff salary data via Excel (`.xlsx`).
-- **Export to PDF**: Integrated PDF generation using `jspdf` and `pdf-lib`.
+- **Digital Payslips**: Generate and view monthly salary slips instantly.
+- **Secure Access**: Protected by a 6-digit PIN system with Bcrypt encryption.
+- **Bulk Upload**: Admin tools to process staff salary data via Excel (`.xlsx`).
+- **Export to PDF**: Professional PDF generation using `jspdf` and `pdf-lib`.
 
 ### 📅 Leave & Attendance Monitoring (Cuti)
-- **History Tracking**: Comprehensive logs of employee leave and attendance history.
-- **Quota Calculation**: Automated calculation of remaining leave based on employee anniversary dates and project-specific holidays.
-- **Holiday Integration**: Automatically syncs with national holidays and mandatory leave (Cuti Bersama).
+- **Real-time History**: Track all previous leave and attendance records.
+- **Automated Quota**: Calculation based on employee tenure and project calendars.
+- **Calendar Sync**: Integrated with national holidays and mandatory leave (Cuti Bersama).
 
-### 🔐 Security & Authentication
-- **Multi-layer Hashing**: Passwords secured using a unique `SHA-256(MD5(password))` pattern.
-- **Role-based Access Control**: Distinct interfaces for Admins, Staff, and General Employees.
-- **PIN-based Verification**: Additional security layer for sensitive financial data.
+### 🔐 Advanced Security
+- **Multi-layer Hashing**: Passwords secured using a custom `SHA-256(MD5(password))` pattern.
+- **Session Security**: PIN-based verification for all financial and sensitive data access.
+- **RBAC**: Role-Based Access Control for Admins, Staff, and Field Employees.
 
-### 🏢 Multi-tenant Support
-- Designed to handle multiple **Regions** and **Tenants** within a single dashboard.
-- Dynamic filtering based on tenant-specific data.
+### 🏢 Corporate Architecture
+- **Multi-tenant Support**: Scalable design handling multiple companies and regions.
+- **Efficient Pooling**: MySQL connection pooling for high-performance data retrieval.
+
+---
 
 ## 🛠️ Technical Stack
 
-- **Frontend**: React 19, Tailwind CSS, Axios, Recharts (Data Visualization).
+- **Frontend**: React 19, Tailwind CSS (Custom Styling), Recharts (Analytics).
 - **Backend**: Node.js, Express.js.
-- **Database**: MySQL (using `mysql2/promise` for async/await).
-- **Libraries**: SweetAlert2 (UI Alerts), FontAwesome (Icons), XLSX (Excel processing).
+- **Database**: MySQL (optimized with `mysql2/promise`).
+- **Security**: Bcrypt.js, Crypto (Node), PIN-based authentication.
 
-## 🏗️ Architecture
-
-The project follows a decoupled architecture:
-- **Frontend**: A modern SPA built with React and styled with Tailwind CSS for a premium, responsive look.
-- **Backend**: A RESTful API built with Express handling business logic, authentication, and database transactions.
+## 💡 System Impact
+- **Paperless Workflow**: 100% reduction in physical payslip printing and distribution.
+- **Enhanced Privacy**: Strict data isolation between different tenants and regions.
+- **Mobile Friendly**: Fully responsive design for field employees access.
 
 ## 🚦 Getting Started
 
@@ -53,14 +71,14 @@ The project follows a decoupled architecture:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/internal-hris.git
+   git clone https://github.com/faturrahmanalharitszoe/internal-HRIS-RC.git
    ```
 
 2. **Backend Setup**
    ```bash
    cd backend
    npm install
-   # Configure your .env file
+   # Create .env based on index.js requirements
    npm start
    ```
 
@@ -72,5 +90,5 @@ The project follows a decoupled architecture:
    ```
 
 ---
+*Developed for internal optimization at Resik Cemerlang.*
 
-*This project was developed for internal use at Resik Cemerlang to optimize operational workflows.*
