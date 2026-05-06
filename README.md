@@ -20,7 +20,7 @@ A comprehensive Internal Human Resource Information System (HRIS) built to strea
   <img src="images/Img2.png" width="400" alt="Salary Security">
   <img src="images/Img3.png" width="400" alt="Payroll Management">
   <br />
-  <i>Left: PIN Security Verification. Right: Digital Salary Slip Management.</i>
+  <i>Left: PIN Security Verification. Right: Digital Salary Slip.</i>
 </p>
 
 ---
